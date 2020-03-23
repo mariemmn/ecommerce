@@ -15,11 +15,11 @@ class LaunchScreen extends Component {
         start={{x: 0, y: 0}}
         end={{x: 0, y: 1}}
         colorStart="#98109F"
-        colorMiddle="#3E0E88"
+        colorMiddle="#5c109f"
         colorEnd="#3E0E88"
         style={styles.container}>
         <Image style={styles.logo} source={require('./assets/imgs/logo.png')} />
-        {loading && <ActivityIndicator size="large" color="#ffffff" />}
+        {loading && <ActivityIndicator size={55} color="#ffffff" />}
       </GradientContainer>
     );
   }
@@ -30,17 +30,16 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    //backgroundColor: 'yellow',
   },
   text: {
     fontSize: 20,
     color: 'orange',
   },
   logo: {
-    width: '90%',
-    height: getSize(80),
+    width: '95%',
+    height: getSize(90),
     resizeMode: 'contain',
-    marginBottom: getSize(15),
+    marginBottom: getSize(18),
   },
 });
 export default LaunchScreen;
