@@ -46,14 +46,18 @@ class Welcome extends Component {
     const {selected} = this.state;
     const BtnPrimary = props => {
       return (
-        <TouchableOpacity style={[styles.btn, styles.primary]}>
+        <TouchableOpacity
+          style={[styles.btn, styles.primary]}
+          onPress={() => this.props.navigation.navigate('Subscription')}>
           <Text style={[styles.btnText, styles.textPrimary]}>{props.text}</Text>
         </TouchableOpacity>
       );
     };
     const BtnSecondary = props => {
       return (
-        <TouchableOpacity style={[styles.btn, styles.secondary]}>
+        <TouchableOpacity
+          style={[styles.btn, styles.secondary]}
+          onPress={() => this.props.navigation.navigate('Login')}>
           <Text style={styles.btnText}>{props.text}</Text>
         </TouchableOpacity>
       );
@@ -111,7 +115,8 @@ class Welcome extends Component {
         </View>
 
         {/**Link Section */}
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('Contenu')}>
           <Text style={styles.link}>Pas pour l'instant</Text>
         </TouchableOpacity>
       </View>

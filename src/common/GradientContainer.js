@@ -6,7 +6,11 @@ class GradientContainer extends Component {
     const {colorStart, colorMiddle, colorEnd, style} = this.props;
     return (
       <LinearGradient
-        colors={[colorEnd, colorMiddle, colorStart]}
+        colors={
+          this.props.colors
+            ? this.props.colors
+            : [colorEnd, colorMiddle, colorStart]
+        }
         //colors={['#3E0E88', '#5c109f', '#98109F']}
         style={style}>
         {this.props.children}
